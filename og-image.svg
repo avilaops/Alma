@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2C1810"/>
+      <stop offset="100%" stop-color="#3d2419"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g fill="#C19A6B" font-family="'Georgia', 'Times New Roman', serif">
+    <text x="80" y="200" font-size="160" font-weight="300" letter-spacing="8">ALMA</text>
+  <text x="85" y="300" font-size="56" letter-spacing="6">WINE BAR &amp; CAFÉ</text>
+    <text x="85" y="380" font-size="34" fill="#d5b089">GASTRONOMIA · VINHOS · EXPERIÊNCIAS SENSORIAIS</text>
+  </g>
+  <g stroke="#C19A6B" stroke-width="6" fill="none" transform="translate(950 120)">
+    <path d="M40 20 h120 l-12 110 a60 60 0 0 1 -96 0 L40 20Z"/>
+    <path d="M100 130 v150" stroke-linecap="round"/>
+    <path d="M70 300 h60" stroke-linecap="round"/>
+  </g>
+</svg>
