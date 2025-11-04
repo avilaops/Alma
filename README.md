@@ -2,7 +2,7 @@
 
 Website oficial do Alma Wine Bar & Café — um espaço que une gastronomia, vinhos e experiências sensoriais em São José do Rio Preto.
 
-## ✨ Conceito
+## ✨ Conceito 
 
 O projeto foi desenvolvido para traduzir o ambiente físico do Alma em uma presença digital sofisticada, com foco em imersão visual, experiência fluida e harmonia.
 
