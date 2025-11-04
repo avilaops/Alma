@@ -2,9 +2,11 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
-menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+}
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-menu a').forEach(link => {
@@ -74,22 +76,33 @@ window.addEventListener('scroll', () => {
 // Form submission handler
 const contactForm = document.querySelector('.contact-form form');
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(contactForm);
-    const data = {};
-    formData.forEach((value, key) => {
-        data[key] = value;
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(contactForm);
+        const data = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
+        
+        // Display success message with better UX
+        const submitButton = contactForm.querySelector('.submit-button');
+        const originalText = submitButton.textContent;
+        submitButton.textContent = '✓ Reserva Enviada!';
+        submitButton.style.background = '#4CAF50';
+        submitButton.disabled = true;
+        
+        // Reset form after delay
+        setTimeout(() => {
+            contactForm.reset();
+            submitButton.textContent = originalText;
+            submitButton.style.background = '';
+            submitButton.disabled = false;
+        }, 3000);
     });
-    
-    // Display success message
-    alert('Obrigado pela sua reserva! Entraremos em contato em breve para confirmar.');
-    
-    // Reset form
-    contactForm.reset();
-});
+}
 
 // Animate elements on scroll
 const observerOptions = {
@@ -113,13 +126,13 @@ document.querySelectorAll('.feature, .experience-card, .category, .info-item').f
 });
 
 // Add parallax effect to hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero) {
+const hero = document.querySelector('.hero');
+if (hero) {
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
         hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-});
+    });
+}
 
 // Add hover effect to experience cards
 document.querySelectorAll('.experience-card').forEach(card => {

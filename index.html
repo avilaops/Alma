@@ -189,13 +189,13 @@
                 <div class="contact-form">
                     <h3>Faça sua Reserva</h3>
                     <form>
-                        <input type="text" placeholder="Nome" required>
-                        <input type="email" placeholder="Email" required>
-                        <input type="tel" placeholder="Telefone" required>
-                        <input type="date" placeholder="Data" required>
-                        <input type="time" placeholder="Horário" required>
-                        <input type="number" placeholder="Número de pessoas" min="1" required>
-                        <textarea placeholder="Observações" rows="4"></textarea>
+                        <input type="text" name="name" placeholder="Nome" aria-label="Nome" required>
+                        <input type="email" name="email" placeholder="Email" aria-label="Email" required>
+                        <input type="tel" name="phone" placeholder="Telefone" aria-label="Telefone" required>
+                        <input type="date" name="date" placeholder="Data" aria-label="Data da reserva" required>
+                        <input type="time" name="time" placeholder="Horário" aria-label="Horário da reserva" required>
+                        <input type="number" name="guests" placeholder="Número de pessoas" aria-label="Número de pessoas" min="1" required>
+                        <textarea name="notes" placeholder="Observações" aria-label="Observações adicionais" rows="4"></textarea>
                         <button type="submit" class="submit-button">Enviar Reserva</button>
                     </form>
                 </div>
