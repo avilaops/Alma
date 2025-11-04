@@ -61,7 +61,7 @@ let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 100) {
         navbar.style.padding = '0.5rem 0';
         navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.5)';
@@ -69,7 +69,7 @@ window.addEventListener('scroll', () => {
         navbar.style.padding = '1rem 0';
         navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.3)';
     }
-    
+
     lastScroll = currentScroll;
 });
 
@@ -79,21 +79,21 @@ const contactForm = document.querySelector('.contact-form form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         // Get form data
         const formData = new FormData(contactForm);
         const data = {};
         formData.forEach((value, key) => {
             data[key] = value;
         });
-        
+
         // Display success message with better UX
         const submitButton = contactForm.querySelector('.submit-button');
         const originalText = submitButton.textContent;
         submitButton.textContent = '✓ Reserva Enviada!';
         submitButton.style.background = '#4CAF50';
         submitButton.disabled = true;
-        
+
         // Reset form after delay
         setTimeout(() => {
             contactForm.reset();
@@ -136,26 +136,96 @@ if (hero) {
 
 // Add hover effect to experience cards
 document.querySelectorAll('.experience-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
+    card.addEventListener('mouseenter', function () {
         this.style.transition = 'transform 0.3s ease';
     });
-    
-    card.addEventListener('mousemove', function(e) {
+
+    card.addEventListener('mousemove', function (e) {
         const rect = this.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        
+
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
-        
+
         const rotateX = (y - centerY) / 20;
         const rotateY = (centerX - x) / 20;
-        
+
         this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
     });
-    
-    card.addEventListener('mouseleave', function() {
+
+    card.addEventListener('mouseleave', function () {
         this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+    });
+});
+
+// Reservation Form - Send to WhatsApp
+const reservationForm = document.getElementById('reservationForm');
+
+if (reservationForm) {
+    reservationForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const date = document.getElementById('date').value;
+        const time = document.getElementById('time').value;
+        const guests = document.getElementById('guests').value;
+        const notes = document.getElementById('notes').value;
+
+        // Format date to Brazilian format
+        const dateObj = new Date(date);
+        const formattedDate = dateObj.toLocaleDateString('pt-BR');
+
+        // Create WhatsApp message
+        let message = `🍷 *RESERVA - ALMA WINE BAR & CAFÉ*\n\n`;
+        message += `👤 *Nome:* ${name}\n`;
+        message += `📧 *Email:* ${email}\n`;
+        message += `📱 *Telefone:* ${phone}\n`;
+        message += `📅 *Data:* ${formattedDate}\n`;
+        message += `🕐 *Horário:* ${time}\n`;
+        message += `👥 *Número de pessoas:* ${guests}\n`;
+
+        if (notes) {
+            message += `📝 *Observações:* ${notes}\n`;
+        }
+
+        // Encode message for URL
+        const encodedMessage = encodeURIComponent(message);
+
+        // WhatsApp number (Brazil format)
+        const whatsappNumber = '5517997470987';
+
+        // Create WhatsApp URL
+        const whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
+
+        // Open WhatsApp
+        window.open(whatsappURL, '_blank');
+
+        // Optional: Reset form
+        reservationForm.reset();
+    });
+}
+
+// Menu Category Navigation
+const menuNavButtons = document.querySelectorAll('.menu-nav-btn');
+const menuCategories = document.querySelectorAll('.menu-category');
+
+menuNavButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const category = button.getAttribute('data-category');
+
+        // Remove active class from all buttons and categories
+        menuNavButtons.forEach(btn => btn.classList.remove('active'));
+        menuCategories.forEach(cat => cat.classList.remove('active'));
+
+        // Add active class to clicked button and corresponding category
+        button.classList.add('active');
+        document.getElementById(category).classList.add('active');
+
+        // Smooth scroll to menu section
+        document.getElementById('menu').scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 });
 

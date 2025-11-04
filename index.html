@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Alma Wine Bar & Café - Um espaço que une gastronomia, vinhos e experiências sensoriais em São José do Rio Preto">
-    <title>Alma Wine Bar & Café</title>
+    <meta name="description"
+        content="Alma Wine Bar & Café - Gastronomia refinada, vinhos selecionados e experiências sensoriais no Ayres Mall, São José do Rio Preto. Reserve sua mesa!">
+    <meta name="keywords"
+        content="wine bar, café, gastronomia, vinhos, São José do Rio Preto, Ayres Mall, restaurante, chef Mirelle Miranda">
+    <meta name="author" content="Alma Wine Bar & Café">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="restaurant">
+    <meta property="og:url" content="https://almawinebarecafe.com/">
+    <meta property="og:title" content="Alma Wine Bar & Café">
+    <meta property="og:description"
+        content="Gastronomia refinada, vinhos selecionados e experiências sensoriais no Ayres Mall">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Alma Wine Bar & Café">
+    <meta property="twitter:description" content="Gastronomia refinada, vinhos selecionados e experiências sensoriais">
+
+    <title>Alma Wine Bar & Café | Ayres Mall - São José do Rio Preto</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
@@ -47,9 +67,14 @@
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="lead">O Alma Wine Bar & Café é um espaço que transcende a experiência gastronômica tradicional.</p>
-                    <p>Criamos um ambiente onde cada detalhe foi pensado para proporcionar momentos únicos de prazer e descoberta. Nossa paixão por vinhos refinados e gastronomia de qualidade se traduz em cada taça servida e cada prato preparado.</p>
-                    <p>Localizado em São José do Rio Preto, o Alma é mais do que um wine bar — é um refúgio onde você pode relaxar, saborear e se conectar com suas emoções através de experiências sensoriais autênticas.</p>
+                    <p class="lead">O Alma Wine Bar & Café é um espaço que transcende a experiência gastronômica
+                        tradicional.</p>
+                    <p>Criamos um ambiente onde cada detalhe foi pensado para proporcionar momentos únicos de prazer e
+                        descoberta. Nossa paixão por vinhos refinados e gastronomia de qualidade se traduz em cada taça
+                        servida e cada prato preparado.</p>
+                    <p>Localizado em São José do Rio Preto, o Alma é mais do que um wine bar — é um refúgio onde você
+                        pode relaxar, saborear e se conectar com suas emoções através de experiências sensoriais
+                        autênticas.</p>
                 </div>
                 <div class="about-features">
                     <div class="feature">
@@ -84,21 +109,24 @@
                     <div class="card-overlay"></div>
                     <div class="card-content">
                         <h3>Degustações Harmonizadas</h3>
-                        <p>Eventos exclusivos que combinam vinhos especiais com pratos cuidadosamente elaborados para realçar cada sabor</p>
+                        <p>Eventos exclusivos que combinam vinhos especiais com pratos cuidadosamente elaborados para
+                            realçar cada sabor</p>
                     </div>
                 </div>
                 <div class="experience-card">
                     <div class="card-overlay"></div>
                     <div class="card-content">
                         <h3>Ambiente Intimista</h3>
-                        <p>Iluminação pensada, música selecionada e decoração sofisticada para criar a atmosfera perfeita</p>
+                        <p>Iluminação pensada, música selecionada e decoração sofisticada para criar a atmosfera
+                            perfeita</p>
                     </div>
                 </div>
                 <div class="experience-card">
                     <div class="card-overlay"></div>
                     <div class="card-content">
                         <h3>Momentos Especiais</h3>
-                        <p>O lugar ideal para celebrações, encontros românticos ou simplesmente apreciar bons momentos</p>
+                        <p>O lugar ideal para celebrações, encontros românticos ou simplesmente apreciar bons momentos
+                        </p>
                     </div>
                 </div>
             </div>
@@ -113,40 +141,384 @@
                 <div class="divider"></div>
             </div>
             <div class="menu-intro">
-                <p>Nossa carta é uma celebração dos sabores. Combinamos técnicas clássicas com toques contemporâneos, sempre priorizando ingredientes frescos e de qualidade.</p>
+                <p class="chef-signature">Com afeto, Chef Mirelle Miranda</p>
+                <p>A combinação de sabores desse menu foi pensada com muito carinho, para harmonizar com os bons
+                    momentos vividos no Alma. Que você possa se deliciar com nossas texturas e sabores, se divertindo e
+                    aproveitando cada momento.</p>
             </div>
-            <div class="menu-categories">
-                <div class="category">
-                    <h3>🍷 Vinhos</h3>
-                    <div class="category-description">
-                        <p><strong>Tintos</strong> - Seleção de rótulos encorpados e elegantes</p>
-                        <p><strong>Brancos</strong> - Opções frescas e aromáticas</p>
-                        <p><strong>Rosés</strong> - Delicados e versáteis</p>
-                        <p><strong>Espumantes</strong> - Para celebrar cada momento</p>
+
+            <!-- Menu Navigation -->
+            <div class="menu-nav">
+                <button class="menu-nav-btn active" data-category="entradas">Entradas</button>
+                <button class="menu-nav-btn" data-category="principais">Principais</button>
+                <button class="menu-nav-btn" data-category="pizzas">Pizzas</button>
+                <button class="menu-nav-btn" data-category="vinhos">Vinhos</button>
+                <button class="menu-nav-btn" data-category="bebidas">Bebidas</button>
+                <button class="menu-nav-btn" data-category="sobremesas">Sobremesas</button>
+            </div>
+
+            <!-- Entradas -->
+            <div class="menu-category active" id="entradas">
+                <h3 class="category-title">Entradas</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Couvert Simples</h4>
+                            <span class="price">R$ 38</span>
+                        </div>
+                        <p class="description">Fatia de focaccia aqueinha - acompanha: manteiga saborizada, berinjela
+                            siciliana e queijo ovelha.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Gaspacho</h4>
+                            <span class="price">R$ 30</span>
+                        </div>
+                        <p class="description">Sopa fria à base de tomates, com vinagrete de pepino e crispy de jamón.
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Tábua Ibérica</h4>
+                            <span class="price">R$ 120</span>
+                        </div>
+                        <p class="description">Lascas de presunto com 180 dias de maturação, azeitonas temperadas,
+                            linguiça portuguesa, lombo curado e queijo manchego. Acompanha tradicional pan con tomate.
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Burrata</h4>
+                            <span class="price">R$ 79</span>
+                        </div>
+                        <p class="description">Cremosa, na textura perfeita com confit de tomate cereja, manjericão e
+                            toast de focaccia de fermentação natural.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Steak Tartar com Gema Curada</h4>
+                            <span class="price">R$ 89</span>
+                        </div>
+                        <p class="description">Carne crua picada na ponta da faca, com toque de ovo curada. Acompanha
+                            torradas.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Pan Tomaca</h4>
+                            <span class="price">R$ 38</span>
+                        </div>
+                        <p class="description">Clássico espanhol, pão com tomate ralado.</p>
                     </div>
                 </div>
-                <div class="category">
-                    <h3>🧀 Entradas</h3>
-                    <div class="category-description">
-                        <p><strong>Tábua de Frios</strong> - Seleção de queijos e embutidos artesanais</p>
-                        <p><strong>Bruschetta</strong> - Variações com ingredientes frescos</p>
-                        <p><strong>Carpaccio</strong> - Finamente fatiado com molhos especiais</p>
+            </div>
+
+            <!-- Principais -->
+            <div class="menu-category" id="principais">
+                <h3 class="category-title">Principais</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Crocante Camembê</h4>
+                            <span class="price">R$ 95</span>
+                        </div>
+                        <p class="description">Queijo camembert de ovelha aqueicido, envolto em massa phylo recheado com
+                            mel da Serra do Roncador e figo - acompanha pães de fermentação natural.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Caçarola de Setas</h4>
+                            <span class="price">R$ 79</span>
+                        </div>
+                        <p class="description">Mix de cogumelos, salteados com vinho branco e cebolas caramelizadas,
+                            finalizado com gruyere e parmesão de ovelha - acompanha pães tostados.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>El Torito (4 unidades)</h4>
+                            <span class="price">R$ 62</span>
+                        </div>
+                        <p class="description">Para tapear, cone com cabo de boi.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Pinchos</h4>
+                            <span class="price">R$ 98</span>
+                        </div>
+                        <p class="description">Tentáculo de polvo e camarões flambados no vinho branco, finalizado com
+                            ervas frescas e azeite de bisque defumado.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Pulpo Brava</h4>
+                            <span class="price">R$ 79</span>
+                        </div>
+                        <p class="description">Com sabor marcante, polvo com páprica picante e mil folhas de batata
+                            brava.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Carpaccio de Filet</h4>
+                            <span class="price">R$ 72</span>
+                        </div>
+                        <p class="description">Djon, nuvem de parmesão de ovelha e brotos - acompanha fatias de pão.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Croqueta de Jamón (6 unidades)</h4>
+                            <span class="price">R$ 58</span>
+                        </div>
+                        <p class="description">Clássico espanhol com jámon serrano, cremosas por dentro e crocantes por
+                            fora.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Ostras Frescas</h4>
+                            <span class="price">R$ 69</span>
+                        </div>
+                        <p class="description">(disponíveis às sextas-feiras) Trio de sabores (vinagretes - maçã verde,
+                            siciliano, tomate verde, sunomono)</p>
                     </div>
                 </div>
-                <div class="category">
-                    <h3>🍝 Pratos Principais</h3>
-                    <div class="category-description">
-                        <p><strong>Massas Artesanais</strong> - Receitas tradicionais e contemporâneas</p>
-                        <p><strong>Risottos</strong> - Cremosos e saborosos</p>
-                        <p><strong>Carnes Premium</strong> - Cortes nobres preparados com perfeição</p>
+            </div>
+
+            <!-- Pizzas -->
+            <div class="menu-category" id="pizzas">
+                <h3 class="category-title">Pizzas</h3>
+                <p class="category-subtitle">Massa de fermentação natural, assadas no forno de pizza</p>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Paella Marinera</h4>
+                            <span class="price">R$ 69</span>
+                        </div>
+                        <p class="description">Frutos do mar, anel de lula.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Ragu Lamb</h4>
+                            <span class="price">R$ 108</span>
+                        </div>
+                        <p class="description">Ragu de cordeiro goiás com páprica, crispy de parmesão.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Escalivada com Burrata</h4>
+                            <span class="price">R$ 79</span>
+                        </div>
+                        <p class="description">Base de molho, tomate confit, pimentão, abgignie, brócolis, burrata.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Marguerita</h4>
+                            <span class="price">R$ 79</span>
+                        </div>
+                        <p class="description">Molho de tomate, muçarela fiorde latte, manjericão, azeite de oliva.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Chorizo</h4>
+                            <span class="price">R$ 95</span>
+                        </div>
+                        <p class="description">Linguiça espanhola de carne, seca, o recheio especiado é feito com alho,
+                            vinho tinto e pimentão defumado.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Trat Bisca Negra</h4>
+                            <span class="price">R$ 30</span>
+                        </div>
+                        <p class="description">Clássico espanhol, de carne, seca, massa de tinta de lula.</p>
                     </div>
                 </div>
-                <div class="category">
-                    <h3>🍰 Sobremesas</h3>
-                    <div class="category-description">
-                        <p><strong>Petit Gâteau</strong> - Clássico irresistível</p>
-                        <p><strong>Tiramisù</strong> - Receita autêntica italiana</p>
-                        <p><strong>Tarte Tatin</strong> - Doçura com toque de sofisticação</p>
+            </div>
+
+            <!-- Vinhos -->
+            <div class="menu-category" id="vinhos">
+                <h3 class="category-title">Carta de Vinhos</h3>
+                <p class="category-subtitle">Seleção cuidadosa de rótulos nacionais e importados</p>
+                <div class="wine-section">
+                    <h4 class="wine-section-title">Espumantes</h4>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <h4>Chandon Brut</h4>
+                                <span class="price">R$ 180</span>
+                            </div>
+                            <p class="description">Argentina • Espumante leve e refrescante</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <h4>Salton Prosecco</h4>
+                                <span class="price">R$ 145</span>
+                            </div>
+                            <p class="description">Brasil • Frutado e aromático</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wine-section">
+                    <h4 class="wine-section-title">Brancos</h4>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <h4>Casillero del Diablo Chardonnay</h4>
+                                <span class="price">R$ 120</span>
+                            </div>
+                            <p class="description">Chile • Encorpado com notas tropicais</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <h4>Miolo Sauvignon Blanc</h4>
+                                <span class="price">R$ 98</span>
+                            </div>
+                            <p class="description">Brasil • Fresco e cítrico</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wine-section">
+                    <h4 class="wine-section-title">Rosés</h4>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <h4>Porta 6 Rosé</h4>
+                                <span class="price">R$ 110</span>
+                            </div>
+                            <p class="description">Portugal • Delicado e versátil</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wine-section">
+                    <h4 class="wine-section-title">Tintos</h4>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <h4>Luigi Bosca Malbec</h4>
+                                <span class="price">R$ 165</span>
+                            </div>
+                            <p class="description">Argentina • Encorpado com taninos macios</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <h4>Concha y Toro Carmenere</h4>
+                                <span class="price">R$ 135</span>
+                            </div>
+                            <p class="description">Chile • Frutado com notas de especiarias</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <h4>Quinta do Crasto Douro</h4>
+                                <span class="price">R$ 195</span>
+                            </div>
+                            <p class="description">Portugal • Elegante e complexo</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <h4>Salton Intenso Cabernet</h4>
+                                <span class="price">R$ 125</span>
+                            </div>
+                            <p class="description">Brasil • Estruturado e persistente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bebidas -->
+            <div class="menu-category" id="bebidas">
+                <h3 class="category-title">Bebidas</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Refrigerantes</h4>
+                            <span class="price">R$ 12</span>
+                        </div>
+                        <p class="description">Coca-Cola, Coca Zero, Sprite, Fanta</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Água Mineral</h4>
+                            <span class="price">R$ 8</span>
+                        </div>
+                        <p class="description">Com ou sem gás</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Sucos Naturais</h4>
+                            <span class="price">R$ 18</span>
+                        </div>
+                        <p class="description">Laranja, Limão, Abacaxi</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Café Espresso</h4>
+                            <span class="price">R$ 8</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Cappuccino</h4>
+                            <span class="price">R$ 14</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Chás Especiais</h4>
+                            <span class="price">R$ 12</span>
+                        </div>
+                        <p class="description">Camomila, Hortelã, Frutas Vermelhas</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sobremesas -->
+            <div class="menu-category" id="sobremesas">
+                <h3 class="category-title">Sobremesas</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Cordero de Leizabarrre</h4>
+                            <span class="price">R$ 88</span>
+                        </div>
+                        <p class="description">Cordero enteiro do campo, assado em panela.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Masselas</h4>
+                            <span class="price">R$ 88</span>
+                        </div>
+                        <p class="description">Macarrão artesanal.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Paella Valenciana</h4>
+                            <span class="price">R$ 79</span>
+                        </div>
+                        <p class="description">Feijão branco, chorizo, frango.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4>Piña Fresca Asada</h4>
+                            <span class="price">R$ 69</span>
+                        </div>
+                        <p class="description">Feijão branco, chorizo, frango.</p>
                     </div>
                 </div>
             </div>
@@ -163,41 +535,73 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="info-item">
-                        <h3>📍 Endereço</h3>
-                        <p>São José do Rio Preto<br>São Paulo, Brasil</p>
+                        <h3>Endereço</h3>
+                        <p><strong>Ayres Mall - Lojas 01 e 02</strong><br>
+                            Av. José Munia, 5535<br>
+                            São José do Rio Preto - SP</p>
+                        <a href="https://www.google.com/maps/place/Ayres+Mall/@-20.8332423,-49.3940527,17z"
+                            target="_blank" class="location-button">
+                            <span class="button-text">Ver no Google Maps</span>
+                            <span class="button-arrow">→</span>
+                        </a>
                     </div>
                     <div class="info-item">
-                        <h3>🕐 Horário de Funcionamento</h3>
+                        <h3>Horário de Funcionamento</h3>
                         <p>Segunda a Quinta: 18h - 00h<br>
-                        Sexta e Sábado: 18h - 02h<br>
-                        Domingo: 18h - 23h</p>
+                            Sexta e Sábado: 18h - 02h<br>
+                            Domingo: 18h - 23h</p>
                     </div>
                     <div class="info-item">
-                        <h3>📞 Contato</h3>
-                        <p>Telefone: (17) 0000-0000<br>
-                        Email: contato@almawine.com.br</p>
+                        <h3>Contato</h3>
+                        <p>Telefone: (17) 99747-0987<br>
+                            WhatsApp: (17) 99747-0987</p>
+                        <a href="https://api.whatsapp.com/send?phone=5517997470987" target="_blank"
+                            class="whatsapp-button">
+                            <span class="button-text">Reserve pelo WhatsApp</span>
+                            <span class="button-arrow">→</span>
+                        </a>
                     </div>
                     <div class="info-item">
-                        <h3>💬 Redes Sociais</h3>
+                        <h3>Redes Sociais</h3>
                         <div class="social-links">
-                            <a href="#" class="social-link">Instagram</a>
-                            <a href="#" class="social-link">Facebook</a>
-                            <a href="#" class="social-link">WhatsApp</a>
+                            <a href="https://instagram.com/alm_winebarecafe" target="_blank"
+                                class="social-link instagram">
+                                <span class="social-icon">IG</span>
+                                <span class="social-text">Instagram</span>
+                            </a>
+                            <a href="https://linktr.ee/alma.winebarcafe" target="_blank" class="social-link linktree">
+                                <span class="social-icon">LT</span>
+                                <span class="social-text">Linktree</span>
+                            </a>
+                            <a href="https://chat.whatsapp.com/BcoTc9WlpUx0l654z84Dif" target="_blank"
+                                class="social-link whatsapp-group">
+                                <span class="social-icon">WA</span>
+                                <span class="social-text">Grupo de Novidades</span>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="contact-form">
                     <h3>Faça sua Reserva</h3>
-                    <form>
-                        <input type="text" name="name" placeholder="Nome" aria-label="Nome" required>
-                        <input type="email" name="email" placeholder="Email" aria-label="Email" required>
-                        <input type="tel" name="phone" placeholder="Telefone" aria-label="Telefone" required>
-                        <input type="date" name="date" placeholder="Data" aria-label="Data da reserva" required>
-                        <input type="time" name="time" placeholder="Horário" aria-label="Horário da reserva" required>
-                        <input type="number" name="guests" placeholder="Número de pessoas" aria-label="Número de pessoas" min="1" required>
-                        <textarea name="notes" placeholder="Observações" aria-label="Observações adicionais" rows="4"></textarea>
-                        <button type="submit" class="submit-button">Enviar Reserva</button>
+                    <form id="reservationForm">
+                        <input type="text" id="name" name="name" placeholder="Nome" aria-label="Nome" required>
+                        <input type="email" id="email" name="email" placeholder="Email" aria-label="Email" required>
+                        <input type="tel" id="phone" name="phone" placeholder="Telefone" aria-label="Telefone" required>
+                        <input type="date" id="date" name="date" placeholder="Data" aria-label="Data da reserva"
+                            required>
+                        <input type="time" id="time" name="time" placeholder="Horário" aria-label="Horário da reserva"
+                            required>
+                        <input type="number" id="guests" name="guests" placeholder="Número de pessoas"
+                            aria-label="Número de pessoas" min="1" required>
+                        <textarea id="notes" name="notes" placeholder="Observações" aria-label="Observações adicionais"
+                            rows="4"></textarea>
+                        <button type="submit" class="submit-button">
+                            <span class="button-text">Enviar Reserva via WhatsApp</span>
+                            <span class="button-arrow">→</span>
+                        </button>
                     </form>
+                    <p class="form-note">Ao enviar, você será redirecionado para o WhatsApp com sua reserva preenchida.
+                    </p>
                 </div>
             </div>
         </div>
@@ -206,11 +610,39 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Alma Wine Bar & Café. Todos os direitos reservados.</p>
-            <p>Desenvolvido com paixão por gastronomia e bons vinhos.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Alma Wine Bar & Café</h3>
+                    <p>Gastronomia, Vinhos e Experiências Sensoriais</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Endereço</h4>
+                    <p>📍 Ayres Mall - Lojas 01 e 02</p>
+                    <p>Av. José Munia, 5535</p>
+                    <p>São José do Rio Preto - SP</p>
+                    <a href="https://www.google.com/maps/place/Ayres+Mall/@-20.8332423,-49.3940527,17z" target="_blank"
+                        class="map-link">Ver no Mapa</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato & Redes</h4>
+                    <p>📱 (17) 99747-0987</p>
+                    <a href="https://api.whatsapp.com/send?phone=5517997470987" target="_blank"
+                        class="whatsapp-link">Reserve pelo WhatsApp</a>
+                    <a href="https://instagram.com/alm_winebarecafe" target="_blank"
+                        class="instagram-link">@alm_winebarecafe</a>
+                    <a href="https://linktr.ee/alma.winebarcafe" target="_blank" class="linktree-link">Todos os
+                        Links</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Alma Wine Bar & Café. Todos os direitos reservados.</p>
+                <p>Desenvolvido por <a href="https://avila.inc" target="_blank" class="developer-link">Nícolas Ávila</a>
+                </p>
+            </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
